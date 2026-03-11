@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Job Application Form</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    background-color:#f2f2f2;
+}
+
+form{
+    width:400px;
+    margin:auto;
+    padding:20px;
+    background:white;
+    border-radius:8px;
+}
+
+fieldset{
+    border:2px solid #007BFF;
+}
+
+legend{
+    font-weight:bold;
+    color:#007BFF;
+}
+
+input, select{
+    width:100%;
+    padding:8px;
+    margin-top:5px;
+    margin-bottom:10px;
+}
+
+button{
+    padding:10px;
+    margin-top:10px;
+}
+
+</style>
+
+<script>
+
+function validateForm(){
+
+let username = document.getElementById("username").value;
+let email = document.getElementById("email").value;
+let telephone = document.getElementById("telephone").value;
+
+if(username == "" || email == "" || telephone == ""){
+    alert("Please fill in all required fields.");
+    return false;
+}
+
+alert("Form submitted successfully!");
+return true;
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<form onsubmit="return validateForm()">
+
+<fieldset>
+
+<legend>Contact Information</legend>
+
+<label>Username</label>
+<input type="text" id="username" placeholder="Enter your name">
+
+<label>Email</label>
+<input type="email" id="email" placeholder="Enter your email">
+
+<label>Telephone</label>
+<input type="tel" id="telephone" placeholder="Enter your phone number">
+
+</fieldset>
+
+<br>
+
+<label><b>Select Job Position</b></label><br>
+
+<input type="checkbox"> Account Executive <br>
+<input type="checkbox"> Business Development <br>
+<input type="checkbox"> Inside Sales <br>
+<input type="checkbox"> Sales Manager <br>
+<input type="checkbox"> VP Sales <br>
+
+<br><br>
+
+<label><b>Position Type</b></label>
+
+<select>
+<option>Full Time</option>
+<option>Part Time</option>
+<option>Internship</option>
+</select>
+
+<br>
+
+<label><b>Willing to relocate?</b></label><br>
+
+<input type="radio" name="relocate"> Yes <br>
+<input type="radio" name="relocate"> No <br>
+
+<br>
+
+<button type="submit">Submit</button>
+<button type="reset">Reset</button>
+
+</form>
+
+</body>
+</html>
